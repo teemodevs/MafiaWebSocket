@@ -1,4 +1,4 @@
-package teemoDevs.MafiaWebSocket.web.model;
+package teemoDevs.MafiaWebSocket.chat.model;
 
 public class OutputMessage {
     private String from;

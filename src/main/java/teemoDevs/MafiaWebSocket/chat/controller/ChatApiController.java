@@ -1,18 +1,17 @@
-package teemoDevs.MafiaWebSocket.web;
+package teemoDevs.MafiaWebSocket.chat.controller;
 
-import org.springframework.http.HttpOutputMessage;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Controller;
-import teemoDevs.MafiaWebSocket.web.model.Message;
-import teemoDevs.MafiaWebSocket.web.model.OutputMessage;
+import teemoDevs.MafiaWebSocket.chat.model.Message;
+import teemoDevs.MafiaWebSocket.chat.model.OutputMessage;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
 @Controller
-public class ChatController {
+public class ChatApiController {
     @MessageMapping("/chat")
     @SendTo("/topic/messages")
     public OutputMessage send(Message message) {
